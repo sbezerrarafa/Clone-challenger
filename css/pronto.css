@@ -1,0 +1,356 @@
+@import url(https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400, 700);
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  font-size: 10px;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.header {
+  position: relative;
+  padding: 20px;
+  background: url("../img/capa-madmax2.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  height: 90vh;
+}
+
+.header::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.6) 0%,
+    rgba(0, 212, 255, 0) 75%
+  );
+}
+
+.header .container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.main-navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 5;
+}
+
+.menu {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+}
+
+.menu li {
+  margin: 0 25px;
+}
+
+.menu li a {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.menu li a:hover {
+  color: #e4bb23;
+}
+
+.profile {
+  display: flex;
+  align-items: center;
+}
+
+.profile .avatar {
+  width: 45px;
+  height: 45px;
+  margin-right: 15px;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+.profile .avatar img {
+  border-radius: 50%;
+}
+
+.profile .username {
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.main-info {
+  z-index: 5;
+}
+
+.main-info .title {
+  color: #fff;
+  font-size: 6.5rem;
+  line-height: 1.2em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.genre {
+  display: flex;
+  align-items: center;
+  margin: 15px 0 30px;
+}
+
+.genre li {
+  margin-right: 15px;
+}
+
+.genre li a {
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1.3rem;
+}
+
+.genre li a:hover {
+  color: #e4bb23;
+}
+
+.main-btn {
+  display: flex;
+  align-items: center;
+  max-width: 195px;
+  height: 49px;
+  background: #e4bb23;
+  color: #000;
+  padding: 15px 35px;
+  border-radius: 40px;
+  font-size: 1.5rem;
+}
+
+.main-btn:hover {
+  background: #bc9a1d;
+}
+
+.main-btn span {
+  flex-shrink: 0;
+  margin-right: 10px;
+}
+
+.main-btn i {
+  font-size: 2.25rem;
+}
+
+.sub-info {
+  padding: 20px 0;
+  font-size: 1.4rem;
+  color: #fff;
+}
+
+.sub-info p:first-child {
+  text-transform: capitalize;
+}
+
+.sub-info p:last-child {
+  color: #bc9a1d;
+}
+
+/************************ MAIN *****************************/
+
+#main {
+  background: #f2f2f2;
+}
+
+#main .nav ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+}
+
+#main .nav li {
+  margin: 0 20px;
+}
+
+#main .nav li a {
+  color: #e4bb23;
+  display: block;
+  padding: 25px 0;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+#main .nav li a:hover {
+  box-shadow: inset 0 -1px 0 #e4bb23;
+}
+
+.movies {
+  padding: 20px 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.movies .card {
+  width: 24%;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  margin-bottom: 30px;
+}
+
+.movies .card .card-header {
+  width: 100%;
+  height: auto;
+  margin: 0;
+  overflow: hidden;
+  position: relative;
+}
+
+.movies .card .card-header img {
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.movies .card .card-body {
+  padding: 10px;
+}
+
+.movies .card .card-body .movie-title {
+  margin: 0;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+}
+
+.movies .card .card-body .movie-genre {
+  display: block;
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #e4bb23;
+}
+
+.movies .card .card-body .movie-genre:hover {
+  text-decoration: underline;
+}
+
+.movies .card .card-body .ratings {
+  display: flex;
+  justify-content: space-between;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.movies .card .card-body .ratings i {
+  color: #ccc;
+  cursor: pointer;
+}
+
+.movies .card .card-body .ratings i:hover {
+  color: #e74c3c;
+}
+
+.movies .card .movie-highlight {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  transition: all 0.3s ease-in-out;
+  visibility: hidden;
+  z-index: 1;
+}
+
+.movies .card:hover .movie-highlight {
+  visibility: visible;
+  opacity: 1;
+}
+
+.movies .card .movie-highlight h3 {
+  font-size: 2rem;
+  line-height: 1em;
+  color: #e4bb23;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.movies .card .movie-highlight a {
+  font-size: 5rem;
+  color: #fff;
+}
+
+.movies .card .movie-highlight a:hover {
+  color: #e4bb23;
+}
+
+/*********************** FOOTER *****************************/
+
+#footer {
+  padding: 20px 0;
+  background-color: #fff;
+}
+
+#footer .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#footer .social-media ul {
+  display: flex;
+  align-items: center;
+}
+
+#footer .social-media li:not(:last-child) {
+  margin-right: 40px;
+}
+
+#footer .social-media li a {
+  font-size: 2.5rem;
+  color: #bababa;
+}
+
+#footer .social-media .twitter a:hover {
+  color: #55acee;
+}
+
+#footer .social-media .facebook a:hover {
+  color: #3b5998;
+}
+
+#footer .social-media .instagram a:hover {
+  color: #e95950;
+}
